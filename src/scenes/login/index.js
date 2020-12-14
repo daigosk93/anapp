@@ -1,13 +1,17 @@
 import React from 'react';
-import {SafeAreaView, Text, TouchableHighlight} from 'react-native';
+import {SafeAreaView, Button, View} from 'react-native';
+import {loginStyle} from './styles';
 
 const LoginScreen = ({navigation}) => (
-  <SafeAreaView>
-    <Text>Screen: Login</Text>
-
-    <TouchableHighlight onPress={() => navigation.navigate('Home')}>
-      <Text>Go to home</Text>
-    </TouchableHighlight>
+  <SafeAreaView style={loginStyle.backgroundStyle}>
+    <View style={loginStyle.buttonStyle}>
+      <Button
+        title={'titulo'}
+        onPress={() => {
+          navigation.navigate('Home');
+        }}
+      />
+    </View>
   </SafeAreaView>
 );
 
